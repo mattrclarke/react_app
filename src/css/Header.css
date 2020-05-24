@@ -1,0 +1,23 @@
+
+.MainHeading {
+  height: 160px;
+  position: relative;
+  background: radial-gradient(at top, rgb(26, 78, 107)0%, rgba(10,21,28,1) 70%);
+}
+
+.Logo {
+  height: 59px;
+  width: 66px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.RectSvg {
+ height: 1;
+ transform: rotate(-45 0 0);
+ fill: #01D277;
+ fill-opacity: 0.83;
+}

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+h1 {
+  color: #E3F4FC;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 30px;
+}
+
+h2 {
+  font-family: Montserrat, sans-serif;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.Content {
+  margin: 0 1.5em;
+}
+
+.ItemDetails {
+  padding-bottom: 2em;
+  border-bottom: 1px solid #0F303D;
+  display: inline-flex;
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+.ItemImage {
+  min-width: 140px;
+  padding-right: 2em;
+  positon: relative;
+}
+
+.ItemPoster {
+  background: blue;
+  bottom: 17%;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5), 0px 8px 16px rgba(0, 0, 0, 0.5), 0px 16px 32px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  height: 213px;
+  position: absolute;
+  width: 140px;
+}
+
+.ItemInfo {
+  margin: 1em 0 0 1em;
+  max-width: 200px;
+}
+
+.ItemInfo p {
+  margin-bottom: 0;
+  color: #B8D8E6;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
+
+.MovieDescription h2 {
+  color: #E3F4FC;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+}
+
+.ItemDescription {
+  color: #B8D8E6;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1em;
+}
+
+

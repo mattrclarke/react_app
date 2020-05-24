@@ -1,0 +1,13 @@
+.BackArrow {
+  color: white;
+  left: 1em;
+  font-size: 1.5em;
+  position: absolute;
+  top: 1em;
+  transition:all 0.1s;
+  z-index: 10;
+}
+.BackArrow:hover {
+  color: #E3F4FC;
+	transform: scale(1.3);
+}
