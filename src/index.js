@@ -12,6 +12,7 @@ const routing = (
     <div>
       <Route exact path="/" component={Movies} />
       <Route path="/movie/:id" component={Show} />
+      <Route path="/tv/:id" component={Show} />
     </div>
   </Router>
 )

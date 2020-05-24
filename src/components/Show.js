@@ -13,9 +13,16 @@ class Show extends Component {
 
 componentDidMount() {
 
-  let id = this.props.match.params.id
-  fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=6ed12e064b90ae1290fa326ce9e790ff&language=en-US`)
-    .then(response => {
+  let id = this.props.match.params.id;
+  var mediaType = undefined;
+  if(window.location.href.includes("movie")){
+    mediaType = "movie"
+  } else {
+    mediaType = "tv"
+  }
+  
+  fetch(`https://api.themoviedb.org/3/${mediaType}/${id}?api_key=6ed12e064b90ae1290fa326ce9e790ff&language=en-US`)
+    .then(response => {      
       return response.json();
     })
     .then( (data) => {

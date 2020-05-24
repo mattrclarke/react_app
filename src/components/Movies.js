@@ -59,14 +59,18 @@ class Movies extends Component {
   }
   
   formatResults(results) {
+    
     var movieElements = results.map((movieItem) => {
+    var linkType = movieItem.media_type;
+      
       return (
         {
           title: movieItem.original_title,
           date: movieItem.release_date,
           image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/" + movieItem.poster_path,
           average:  movieItem.vote_average * 10,
-          link: `/movie/${movieItem.id}`
+          link: `${linkType}/${movieItem.id}/`,
+          mediaType: movieItem.media_type
         }
       );
     });

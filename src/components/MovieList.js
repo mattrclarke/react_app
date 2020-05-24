@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import '../css/MovieList.css';
 import MovieItem from "./MovieItem";
 
@@ -18,7 +17,7 @@ class MovieList extends Component {
     
   formatDate(releasedOn){
     if (releasedOn !== undefined){
-      var releasedOn = releasedOn.split("-")
+      releasedOn = releasedOn.split("-")
       var releaseDate = new Date(releasedOn[0], releasedOn[1])
       var month = releaseDate.toLocaleString('default', { month: 'long' });
       var date = releasedOn[0] + " " + month
