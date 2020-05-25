@@ -29,12 +29,21 @@ componentDidMount() {
         let url = "https://image.tmdb.org/t/p/w600_and_h900_bestv2/";
         let poster = url + data.poster_path;
         let backdrop = "https://image.tmdb.org/t/p/w780/" + data.backdrop_path;
-
-        function movieLength(runtime)
+        
+        function movieLength(data)
           {
-            const hours = Math.floor(runtime / 60);
-            const minutes = runtime % 60;
-            return `${hours}h ${minutes}min`;
+            const hours = Math.floor(data.runtime / 60);
+            const minutes = data.runtime % 60;
+            let runtime = undefined;
+            
+            if(data.number_of_seasons == null){
+              const hours = Math.floor(data.runtime / 60);
+              const minutes = data.runtime % 60;
+              runtime = `${hours}h ${minutes}min`;
+            } else {
+              runtime = `${data.number_of_seasons} Seasons`
+            }
+            return runtime
           }
 
         let release_date = "Unknown";
@@ -52,7 +61,7 @@ componentDidMount() {
                      title={data.original_title}
                      releaseDate={release_date}
                      voteAverage={data.vote_average * 10}
-                     movieLength={movieLength(data.runtime)}
+                     movieLength={movieLength(data)}
                      overview={data.overview}
             />
           </div>
